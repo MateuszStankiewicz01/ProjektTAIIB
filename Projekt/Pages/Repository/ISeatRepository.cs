@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface ISeatRepository
+    public interface ISeatRepository
     {
         IEnumerable<Seat> GetSeats();
         Seat GetSeatByID(int seatId);

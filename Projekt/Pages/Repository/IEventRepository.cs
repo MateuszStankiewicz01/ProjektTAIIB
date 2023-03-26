@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface IEventRepository
+    public interface IEventRepository
     {
         IEnumerable<Event> GetEvent();
         Event GetEventByID(int eventId);

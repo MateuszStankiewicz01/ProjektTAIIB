@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface IKarnetRepository
+    public interface IKarnetRepository
     {
         IEnumerable<Karnet> GetKarnets();
         Karnet GetKarnetByID(int karnetId);

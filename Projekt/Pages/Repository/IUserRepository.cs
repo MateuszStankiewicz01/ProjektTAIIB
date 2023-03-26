@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         IEnumerable<User> GetUsers();
         User GetUserByID(int userId);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface ITicketRepository
+    public interface ITicketRepository
     {
         IEnumerable<Ticket> GetTickets();
         Ticket GetTicketByID(int ticketId);

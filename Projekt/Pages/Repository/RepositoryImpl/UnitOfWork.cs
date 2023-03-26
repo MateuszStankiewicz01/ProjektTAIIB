@@ -9,8 +9,15 @@ namespace Projekt.Pages.Repository.RepositoryImpl
     public class UnitOfWork : IDisposable, IUnitOfWork
     {
         private TicketDBContext context = new TicketDBContext();
+        private bool disposed = false;
         IEventSeatRepository eventSeatRepository;
-        IEventSeatRepository courseRepository;
+        IKarnetRepository karnetRepository;
+        IStuardRepository stuardRepository;
+        ISeatRepository seatRepository;
+        ITicketRepository ticketRepository;
+        IUserRepository userRepository;
+        IEventRepository eventRepository;
+
 
         public IEventSeatRepository EventSeatRepository
         {
@@ -25,21 +32,79 @@ namespace Projekt.Pages.Repository.RepositoryImpl
             }
         }
 
-        public IRepository<Event> EventRepository => throw new NotImplementedException();
-
-        public IRepository<Stuard> StuardRepository => throw new NotImplementedException();
-
-        public IRepository<Seat> SeatRepository => throw new NotImplementedException();
-
-        IRepository<EventSeat> IUnitOfWork.EventSeatRepository => throw new NotImplementedException();
-
-        public void Save()
+        public ISeatRepository SeatRepository
         {
-            context.SaveChanges();
+            get
+            {
+
+                if (this.seatRepository == null)
+                {
+                    this.seatRepository = new SeatRepository(context);
+                }
+                return seatRepository;
+            }
         }
 
-        private bool disposed = false;
+        public ITicketRepository TicketRepository
+        {
+            get
+            {
 
+                if (this.ticketRepository == null)
+                {
+                    this.ticketRepository = new TicketRepository(context);
+                }
+                return ticketRepository;
+            }
+        }
+
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                if (this.userRepository == null)
+                {
+                    this.userRepository = new UserRepository(context);
+                }
+                return userRepository;
+            }
+        }
+
+        public IKarnetRepository KarnetRepository
+        {
+            get
+            {
+                if (this.karnetRepository == null)
+                {
+                    this.karnetRepository = new KarnetRepository(context);
+                }
+                return karnetRepository;
+            }
+        }
+
+        public IEventRepository EventRepository
+        {
+            get
+            {
+                if (this.eventRepository == null)
+                {
+                    this.eventRepository = new EventRepository(context);
+                }
+                return eventRepository;
+            }
+        }
+
+        IStuardRepository IUnitOfWork.StuardRepository
+        {
+            get
+            {
+                if (this.stuardRepository == null)
+                {
+                    this.stuardRepository = new StuardRepository(context);
+                }
+                return stuardRepository;
+            }
+        }
         protected virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
@@ -60,7 +125,10 @@ namespace Projekt.Pages.Repository.RepositoryImpl
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            context.SaveChanges();
         }
     }
+
+
 }
+   

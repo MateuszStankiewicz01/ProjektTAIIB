@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface IStuardRepository
+    public interface IStuardRepository
     {
         IEnumerable<Stuard> GetStuards();
         Stuard GetStuardByID(int stuardId);

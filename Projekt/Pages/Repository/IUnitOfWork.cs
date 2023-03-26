@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Projekt.Pages.Repository
 {
-    interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
-        IRepository<Event> EventRepository { get; }
-        IRepository<Stuard> StuardRepository { get; }
-        IRepository<Seat> SeatRepository { get; }
-        IRepository<EventSeat> EventSeatRepository { get; }
+        IEventRepository EventRepository { get; }
+        IStuardRepository StuardRepository { get; }
+        ISeatRepository SeatRepository { get; }
+        IEventSeatRepository EventSeatRepository { get; }
+        ITicketRepository TicketRepository { get; }
+        IUserRepository UserRepository { get; }
+        IKarnetRepository KarnetRepository { get; }
         void SaveChanges();
     }
 }
