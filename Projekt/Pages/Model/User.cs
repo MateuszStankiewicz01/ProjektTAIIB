@@ -28,7 +28,10 @@ namespace Projekt.Pages.Model
         [Required]
         [StringLength(11)]
         public string Pesel { get; set; }
+        [Required]
+        public bool IsAdmin { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
-        public virtual Karnet Karnet { get; set; }
+        public virtual Karnet? Karnet { get; set; }
+        public IEnumerable<Ticket> Ticket { get; set; }
     }
 }
