@@ -3,4 +3,4 @@
  
 
 ## Dokumentacja
-![link](https://polslpl-my.sharepoint.com/:w:/g/personal/erykszm222_student_polsl_pl/EaAIjdff3j5Cm_o3_GKLbWABUOpWxyQl8xVcD1yVhQlMDg?e=qOiylx)
+![link](https://docs.google.com/document/d/1rEKBLw6t3AeDG8rmQC_cm_Yg2n2S9voD/edit?usp=share_link&ouid=114721727340973714983&rtpof=true&sd=true)
