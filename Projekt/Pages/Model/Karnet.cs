@@ -10,7 +10,10 @@ namespace Projekt.Pages.Model
     {
         [Key]
         public int Id { get; set; }
-        public virtual User User { get; set; }
+
+        public User User { get; set; }
+
+        public Seat Seat { get; set; }
 
     }
 }
