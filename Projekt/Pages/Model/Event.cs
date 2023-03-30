@@ -10,15 +10,20 @@ namespace Projekt.Pages.Model
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         [StringLength(40)]
         public string Name { get; set; }
+
         [Required]
         [StringLength(40)]
         public string Location { get; set; }
+
         [Required]
         public DateTime Date { get; set; }
-        public virtual ICollection<Seat> Seats { get; set; }
+
+        public virtual ICollection<EventSeat> Seats { get; set; }
+
         public virtual ICollection<Stuard> Stuard { get; set; }
     }
 }

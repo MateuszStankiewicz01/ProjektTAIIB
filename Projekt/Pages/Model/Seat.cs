@@ -10,12 +10,15 @@ namespace Projekt.Pages.Model
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         [StringLength(20)]
         public String Row { get; set; }
+
         [Required]
         [StringLength(20)]
         public String Column { get; set; }
+
         [Required]
         [StringLength(20)]
         public String Sector { get; set; }

@@ -10,6 +10,7 @@ namespace Projekt.Pages.Model
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         [StringLength(20)]
         public String Name { get; set; }
