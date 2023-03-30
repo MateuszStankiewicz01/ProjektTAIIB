@@ -7,7 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 namespace Projekt
 {
     public class Startup
@@ -23,6 +24,7 @@ namespace Projekt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

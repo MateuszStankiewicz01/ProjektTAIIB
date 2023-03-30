@@ -18,7 +18,6 @@ namespace Projekt.Pages.Repository.RepositoryImpl
         IUserRepository userRepository;
         IEventRepository eventRepository;
 
-
         public IEventSeatRepository EventSeatRepository
         {
             get
